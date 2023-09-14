@@ -1,0 +1,8 @@
+# Nmap 7.94 scan initiated Wed Sep 13 16:16:26 2023 as: nmap --script smb-enum-users -p 445 -oN nmap/smb-enum 10.10.51.73
+Nmap scan report for ip-10-10-51-73.ap-south-1.compute.internal (10.10.51.73)
+Host is up (0.14s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+# Nmap done at Wed Sep 13 16:16:46 2023 -- 1 IP address (1 host up) scanned in 20.04 seconds
