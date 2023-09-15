@@ -1,0 +1,52 @@
+# Nmap 7.94 scan initiated Thu Sep 14 20:10:04 2023 as: nmap -sC -sV -oN nmap/initial 10.10.1.232
+Nmap scan report for ip-10-10-1-232.ap-south-1.compute.internal (10.10.1.232)
+Host is up (0.15s latency).
+Not shown: 991 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            VERSION
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  Ñ                  Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2023-09-15T05:42:26+00:00; +5h30m14s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: JON-PC
+|   NetBIOS_Domain_Name: JON-PC
+|   NetBIOS_Computer_Name: JON-PC
+|   DNS_Domain_Name: Jon-PC
+|   DNS_Computer_Name: Jon-PC
+|   Product_Version: 6.1.7601
+|_  System_Time: 2023-09-15T05:42:18+00:00
+| ssl-cert: Subject: commonName=Jon-PC
+| Not valid before: 2023-09-14T05:39:57
+|_Not valid after:  2024-03-15T05:39:57
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49158/tcp open  msrpc              Microsoft Windows RPC
+49159/tcp open  msrpc              Microsoft Windows RPC
+Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 02:b9:99:4d:41:d3 (unknown)
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 6h30m13s, deviation: 2h14m10s, median: 5h30m12s
+| smb2-time: 
+|   date: 2023-09-15T05:42:18
+|_  start_date: 2023-09-15T05:39:55
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: Jon-PC
+|   NetBIOS computer name: JON-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-09-15T00:42:18-05:00
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 14 20:12:12 2023 -- 1 IP address (1 host up) scanned in 128.60 seconds
