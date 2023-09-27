@@ -1,0 +1,10 @@
+# Nmap 7.94 scan initiated Wed Sep 27 03:10:11 2023 as: nmap -oN nmap/nfs -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.37.78
+Nmap scan report for ip-10-10-37-78.ap-south-1.compute.internal (10.10.37.78)
+Host is up (0.14s latency).
+
+PORT    STATE SERVICE
+111/tcp open  rpcbind
+| nfs-showmount: 
+|_  /var *
+
+# Nmap done at Wed Sep 27 03:10:25 2023 -- 1 IP address (1 host up) scanned in 13.36 seconds
