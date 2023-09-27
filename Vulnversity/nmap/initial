@@ -1,0 +1,13 @@
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-09-15 07:10 EDT
+Nmap scan report for 10.10.162.176
+Host is up (0.26s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3128/tcp open  squid-http
+
+Nmap done: 1 IP address (1 host up) scanned in 17.19 seconds
+
