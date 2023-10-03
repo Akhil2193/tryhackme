@@ -1,0 +1,6 @@
+Loaded 5 password hashes with 5 different salts (sha512crypt, crypt(3) $6$ [SHA512 128/128 SSE2 2x])
+Cost 1 (iteration count) is 5000 for all loaded hashes
+secret12         (bee)     
+abcd123          (szymex)     
+1qaz2wsx         (muirland)     
+secuirty3        (paradox)     
